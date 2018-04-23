@@ -1,17 +1,19 @@
 function bubbleSort(arr) {
-  const counter = arr.length;
-  let ticks = 0;
+  let isSwapped = true;
+
   if (!Array.isArray(arr)) return;
-  while (ticks < counter) {
+
+  while (isSwapped) {
+    isSwapped = false;
     for (let i = 0; i < arr.length - 1; i++) {
       if (arr[i] > arr[i + 1]) {
         // swapping elements
         const temp = arr[i + 1];
         arr[i + 1] = arr[i];
         arr[i] = temp;
+        isSwapped = true;
       }
     }
-    ticks++;
   }
   return arr;
 }
