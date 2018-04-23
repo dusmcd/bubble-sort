@@ -1,8 +1,8 @@
 function bubbleSort(arr) {
   const counter = arr.length;
   let ticks = 0;
-
-  do {
+  if (!Array.isArray(arr)) return;
+  while (ticks < counter) {
     for (let i = 0; i < arr.length - 1; i++) {
       if (arr[i] > arr[i + 1]) {
         // swapping elements
@@ -12,8 +12,6 @@ function bubbleSort(arr) {
       }
     }
     ticks++;
-  } while (ticks < counter);
-
-  console.log(arr)
+  }
   return arr;
 }

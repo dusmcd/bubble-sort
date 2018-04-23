@@ -3,7 +3,7 @@ describe('Bubble Sort', function() {
     const arr = [5, 3, 10, 2, 8, 7];
     spyOn(window, 'bubbleSort').and.callThrough();
     bubbleSort(arr);
-    expect(bubbleSort.calls.count()).toEqual(arr.length);
+    expect(bubbleSort.calls.count()).toEqual(1);
   });
 
   it('handles empty array', function() {
