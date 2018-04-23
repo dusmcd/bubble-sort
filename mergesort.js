@@ -6,6 +6,8 @@ function split(wholeArray) {
   return [firstHalf, secondHalf];
 }
 
+
+
 function merge(arr1, arr2) {
   let newArray = [];
   let head1 = 0;
@@ -21,4 +23,15 @@ function merge(arr1, arr2) {
     }
   }
   return newArray;
+}
+
+function mergeSort(arr){
+  if(arr.length === 1){
+    return arr
+  }else{
+    let splitArrays = split(arr);
+    let array1 = splitArrays[0];
+    let array2 = splitArrays[1];
+    return merge(mergeSort(array1), mergeSort(array2));
+  }
 }

@@ -22,3 +22,10 @@ describe('Merge array function', function() {
     expect(merge([3, 17, 100], [6, 7])).toEqual([3, 6, 7, 17, 100]);
   });
 });
+
+describe('Merge sort function', function() {
+  it('takes an unordered array and returns a sorted array',
+  function(){
+    expect(mergeSort([6, 23, 100, 12, 45, 3, 56, 14, 22])).toEqual([3, 6, 12, 14, 22, 23, 45, 56, 100])
+  })
+})
