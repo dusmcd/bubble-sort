@@ -6,25 +6,19 @@ function split(wholeArray) {
   return [firstHalf, secondHalf];
 }
 
-function merge (arr1, arr2 ){
+function merge(arr1, arr2) {
   let newArray = [];
+  let head1 = 0;
+  let head2 = 0;
 
-  arr1.forEach(function(num, i){
-    if(num > arr2[i]){
-      newArray.push(arr2[i]);
-      newArray.push(num);
-    }else{
-      newArray.push(num);
-      newArray.push(arr2[i]);
+  while (arr1[head1] || arr2[head2]) {
+    if (arr1[head1] < arr2[head2] || !arr2[head2]) {
+      newArray.push(arr1[head1]);
+      head1++;
+    } else if (arr2[head2] < arr1[head1] || !arr1[head1]) {
+      newArray.push(arr2[head2]);
+      head2++;
     }
-  })
+  }
   return newArray;
 }
-
-
-
-// let extra =
-
-
-arr1 = arr1 >= arr2 ? arr2: arr1;
-//   let longArr = arr1 >= arr2 ? arr1: arr2;

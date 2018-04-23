@@ -11,12 +11,14 @@ describe('Split array function', function() {
   });
 });
 
-describe('Merge array function', function(){
-  it('takes two sorted arrays, and merges them into one sorted array' ,
-  function() {
-    expect(merge([7, 8, 10], [13, 15 ,16])).toEqual([7, 8,10, 13, 15, 16])
+describe('Merge array function', function() {
+  it('takes two sorted arrays, and merges them into one sorted array', function() {
+    expect(merge([7, 8, 10], [13, 15, 16])).toEqual([7, 8, 10, 13, 15, 16]);
   });
   it('sorts large range', function() {
-    expect(merge([9, 35, 90], [2, 40, 75])).toEqual([2, 9, 35, 40, 75, 90])
-  })
+    expect(merge([9, 35, 90], [2, 40, 75])).toEqual([2, 9, 35, 40, 75, 90]);
+  });
+  it('merges arrays that have different lengths', function() {
+    expect(merge([3, 17, 100], [6, 7])).toEqual([3, 6, 7, 17, 100]);
+  });
 });
